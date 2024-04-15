@@ -41,16 +41,7 @@ const home_template = `
 </div>
 `;
 
-if (document.URL.match("gallery")) {
-  fetch(
-    "https://raw.githubusercontent.com/anant-357/profile/main/content/gallery.json",
-  ).then((res) => {
-    res.json().then((gallery) => {
-      const rendered = Mustache.render(gallery_template, { gallery });
-      document.getElementById("page").innerHTML = rendered;
-    });
-  });
-} else if (document.URL.match("index")) {
+document.getElementById("work-link").addEventListener("click", (_e) => {
   fetch(
     "https://raw.githubusercontent.com/anant-357/profile/main/content/work.json",
   ).then((res) => {
@@ -59,7 +50,23 @@ if (document.URL.match("gallery")) {
       document.getElementById("page").innerHTML = rendered;
     });
   });
-} else {
+});
+
+document.getElementById("gallery-link").addEventListener("click", (_e) => {
+  fetch(
+    "https://raw.githubusercontent.com/anant-357/profile/main/content/gallery.json",
+  ).then((res) => {
+    res.json().then((gallery) => {
+      const rendered = Mustache.render(gallery_template, { gallery });
+      document.getElementById("page").innerHTML = rendered;
+    });
+  });
+});
+
+document.getElementById("home-link").addEventListener("click", (_e) => {
   const rendered = Mustache.render(home_template);
   document.getElementById("page").innerHTML = rendered;
-}
+});
+
+const rendered = Mustache.render(home_template);
+document.getElementById("page").innerHTML = rendered;
