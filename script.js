@@ -1,18 +1,3 @@
-gallery = {
-  data: [
-    {
-      image:
-        "https://raw.githubusercontent.com/anant-357/dotfiles-wayland/main/wallpapers/wallhaven-r0w5p0_1920x1080.png",
-      caption: "The gate",
-    },
-    {
-      image:
-        "https://raw.githubusercontent.com/anant-357/dotfiles-wayland/main/wallpapers/red_future.gif",
-      caption: "Red Future",
-    },
-  ],
-};
-
 const data_template = `{{#data}}
             <div class="content-item">
               <div class="content-header">
@@ -45,9 +30,8 @@ if (document.URL.match("gallery")) {
     "https://raw.githubusercontent.com/anant-357/profile/main/content/work.json?token=GHSAT0AAAAAACQKYINTZO6AIYNXYCYUTXKGZQ46UKQ",
   ).then((res) => {
     res.json().then((data) => {
-      console.log(data);
-      //const rendered = Mustache.render(data_template, data);
-      //document.getElementById("page").innerHTML = rendered;
+      const rendered = Mustache.render(data_template, { data });
+      document.getElementById("page").innerHTML = rendered;
     });
   });
 }
