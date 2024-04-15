@@ -1,0 +1,15 @@
+{
+  data: [
+    {
+      title: "Title",
+      date: "[14|04|2024]",
+      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia lacinia ipsum ac lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. In nec mi pulvinar, finibus eros at,interdum tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut nec quam turpis. Mauris mollis dui nec tincidunt accumsan. Nam sed efficitur odio. Donec congue metus sed ligula dictum, vitae vehicula libero malesuada. Ut eget velit etmassa elementum fringilla ac quis felis. Curabitur egestas tristique dolor. Phasellus nisl sem, aliquam ut ex at, porta malesuada elit. Mauris nec justo id neque porttitor ullamcorper. Donec sit amet erat vitae elit volutpat interdum eget a nisl. Mauris eu magna id sapien semper aliquam vel et mi. In tristique bibendum risus in vehicula.",
+      links: [
+        { name: "Link 1", link: "#" },
+        { name: "Link 2", link: "#" },
+      ],
+      references: "adsaubcjansdoivadovamosv",
+    },
+  ],
+};
+
