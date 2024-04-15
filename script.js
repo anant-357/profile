@@ -68,5 +68,18 @@ document.getElementById("home-link").addEventListener("click", (_e) => {
   document.getElementById("page").innerHTML = rendered;
 });
 
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+  link = document.createElement("link");
+  link.rel = "icon";
+  document.head.appendChild(link);
+}
+
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  link.href = "./assets/dark/favicon.ico";
+} else {
+  link.href = "./assets/light/favicon.ico";
+}
+
 const rendered = Mustache.render(home_template);
 document.getElementById("page").innerHTML = rendered;
