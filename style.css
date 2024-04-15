@@ -4,6 +4,24 @@
   font-family: "Poppins";
 }
 
+:root {
+  --bg-color: white;
+  --fg-color: black;
+  --link-color: #222222aa;
+  --accent-color: #90898f;
+  --intermediate-color: #373737;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: black;
+    --fg-color: white;
+    --link-color: #eeeeeecc;
+    --accent-color: #bbbbbb;
+    --intermediate-color: #c9c9c9;
+  }
+}
+
 *::-webkit-scrollbar {
   width: 5px;
   height: 8px;
@@ -15,24 +33,26 @@
 }
 
 .link {
-  color: #222222aa;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 .link:visited {
-  color: #222222aa;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 html,
 body {
   height: 99%;
+  background-color: var(--bg-color);
 }
 
 body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 .nav {
@@ -50,7 +70,7 @@ body {
   font-size: 2.5em;
   letter-spacing: 0.2rem;
   text-decoration: none;
-  color: #000;
+  color: var(--fg-color);
   cursor: pointer;
 }
 
@@ -59,7 +79,7 @@ body {
   font-weight: 300;
   font-size: 0.7em;
   letter-spacing: 0.15rem;
-  color: #90898f;
+  color: var(--accent-color);
 }
 
 .list {
@@ -98,7 +118,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--fg-color);
 }
 
 .content-header {
@@ -112,25 +132,30 @@ body {
   font-weight: bold;
   font-size: 2em;
   letter-spacing: 0.2rem;
+  color: var(--fg-color);
 }
 
 .content-date {
   font-size: 1.5em;
   letter-spacing: 0.2rem;
   opacity: 0.4;
+  color: var(--fg-color);
 }
 
 .content-body {
   padding: 0 5%;
+  color: var(--fg-color);
 }
 
 .content-links {
   padding: 0 2%;
+  color: var(--fg-color);
 }
 
 .content-footer {
   padding: 0 2%;
   opacity: 0.4;
+  color: var(--fg-color);
 }
 
 .content-gallery {
@@ -139,7 +164,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--fg-color);
 }
 
 .content-img {
@@ -150,6 +175,7 @@ body {
 .content-caption {
   padding: 2% 5%;
   opacity: 0.4;
+  color: var(--fg-color);
 }
 
 .container {
@@ -161,12 +187,12 @@ body {
   box-sizing: border-box;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: var(--bg-color);
 }
 .container .lines {
   width: 0.2em;
   height: 30%;
-  background-color: black;
+  background-color: var(--fg-color);
   position: relative;
   animation: wave 1s ease-in infinite alternate;
 }
@@ -176,7 +202,7 @@ body {
   display: block;
   width: 0.5em;
   height: 0.5em;
-  background-color: white;
+  background-color: var(--fg-color);
   position: absolute;
   left: -75%;
   border-radius: 100%;
@@ -274,64 +300,65 @@ body {
     height: 0;
   }
 }
+
 @keyframes shrink-1 {
   0% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   24% {
     transform: scale(0.5);
-    background-color: #373737;
+    background-color: var(--intermediate-color);
   }
   25% {
     transform: scale(1);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   50% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   74% {
     transform: scale(0.5);
-    background-color: #373737;
+    background-color: var(--intermediate-color);
   }
   75% {
     transform: scale(1);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   100% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
 }
 @keyframes shrink-2 {
   0% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   24% {
-    background-color: #000;
+    background-color: var(--fg-color);
     transform: scale(1);
   }
   25% {
     transform: scale(0.5);
-    background-color: #373737;
+    background-color: var(--intermediate-color);
   }
   50% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   74% {
     transform: scale(1);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
   75% {
     transform: scale(0.5);
-    background-color: #373737;
+    background-color: var(--intermediate-color);
   }
   100% {
     transform: scale(0.75);
-    background-color: #000;
+    background-color: var(--fg-color);
   }
 }
 
@@ -341,6 +368,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: var(--fg-color);
 }
 
 .footer-links {
@@ -348,4 +376,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 5%;
+  color: var(--fg-color);
+  opacity: 1;
 }
