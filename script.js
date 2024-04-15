@@ -41,6 +41,13 @@ if (document.URL.match("gallery")) {
   const rendered = Mustache.render(gallery_template, gallery);
   document.getElementById("page").innerHTML = rendered;
 } else if (document.URL.match("index")) {
-  const rendered = Mustache.render(data_template, data);
-  document.getElementById("page").innerHTML = rendered;
+  fetch(
+    "https://raw.githubusercontent.com/anant-357/profile/main/content/work.json?token=GHSAT0AAAAAACQKYINTZO6AIYNXYCYUTXKGZQ46UKQ",
+  ).then((res) => {
+    res.json().then((data) => {
+      console.log(data);
+      //const rendered = Mustache.render(data_template, data);
+      //document.getElementById("page").innerHTML = rendered;
+    });
+  });
 }
