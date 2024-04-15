@@ -4,7 +4,7 @@ const work_template = `{{#data}}
           <div class="content-title">{{title}}</div>
           <div class="content-date">{{date}}</div>
               </div>
-          <div class="content-body">{{body}}
+          <div class="content-body">{{{body}}}
               </div>
               <div class="content-links">
           {{#links}}
