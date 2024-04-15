@@ -119,8 +119,6 @@ body {
 
 .content-body {
   padding: 0 5%;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .content-links {
