@@ -8,7 +8,7 @@ const work_template = `{{#data}}
               </div>
               <div class="content-links">
           {{#links}}
-          <a class="link" href={{link}}>{{name}}</a>
+          <a class="link fg-green-dark" href={{link}}>{{name}}</a>
           {{/links}}
               </div>
           <div class="content-footer">References: {{references}}</div>
@@ -43,7 +43,7 @@ const home_template = `
 
 document.getElementById("work-link").addEventListener("click", (_e) => {
   fetch(
-    "https://raw.githubusercontent.com/anant-357/profile/main/content/work.json",
+    "https://raw.githubusercontent.com/anant-357/profile-content/main/content/work.json",
   ).then((res) => {
     res.json().then((data) => {
       const rendered = Mustache.render(work_template, { data });
@@ -54,7 +54,7 @@ document.getElementById("work-link").addEventListener("click", (_e) => {
 
 document.getElementById("gallery-link").addEventListener("click", (_e) => {
   fetch(
-    "https://raw.githubusercontent.com/anant-357/profile/main/content/gallery.json",
+    "https://raw.githubusercontent.com/anant-357/profile-content/main/content/gallery.json",
   ).then((res) => {
     res.json().then((gallery) => {
       const rendered = Mustache.render(gallery_template, { gallery });

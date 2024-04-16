@@ -6,6 +6,7 @@
 
 :root {
   --bg-color: white;
+  --bg-color-s: #ddd;
   --fg-color: black;
   --link-color: #222222aa;
   --accent-color: #90898f;
@@ -15,6 +16,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: black;
+    --bg-color-s: #222;
     --fg-color: white;
     --link-color: #eeeeeecc;
     --accent-color: #bbbbbb;

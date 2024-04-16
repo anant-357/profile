@@ -1,0 +1,55 @@
+:root {
+  --green-light: #20ff20;
+  --green-dark: #208020;
+  --red-light: #ff2020;
+  --red-dark: #802020;
+  --blue-light: #2020ff;
+  --blue-dark: #202080;
+}
+
+.fg-green-light {
+  color: var(--green-light) !important;
+}
+.fg-green-dark {
+  color: var(--green-dark) !important;
+}
+
+.fg-red-light {
+  color: var(--red-light) !important;
+}
+.fg-red-dark {
+  color: var(--red-dark) !important;
+}
+
+.fg-blue-light {
+  color: var(--blue-light) !important;
+}
+.fg-blue-dark {
+  color: var(--blue-dark) !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-blink {
+  text-decoration-line: blink;
+}
+
+.quote {
+  padding: 0 3%;
+  background: var(--bg-color-s);
+  border-left: 1px solid var(--fg-color);
+}
+
+.li-circle {
+  list-style-type: disc;
+}
